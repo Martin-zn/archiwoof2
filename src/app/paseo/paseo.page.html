@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-button color="primary" routerLink="/inicio">inicio</ion-button>
+</ion-header>
+
+<ion-content>
+  <!-- Mapa simulado con imagen -->
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuJ-xRkXVXA2hHX9PSSy3ZzZQmhtsY971fojscC4RPGwqf1l2TBlofKWMupoOzc2tXpI&usqp=CAU"
+    alt="Mapa de paseos"
+    style="width: 100%; height: 300px; object-fit: cover;"
+  />
+
+  <!-- Tarjeta con paseadores -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Paseadores Disponibles</ion-card-title>
+      <ion-card-subtitle>Selecciona el paseador de tu preferencia</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Paseador 1" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Juan Pérez</h2>
+            <p>Experto en paseos de perros grandes. Más de 5 años de experiencia.</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Paseador 2" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>María Gómez</h2>
+            <p>Especialista en paseos para cachorros y perros pequeños. Cuidadosa y confiable.</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Paseador 3" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Pedro Rodríguez</h2>
+            <p>Conoce las mejores rutas para paseos largos. Paseador certificado.</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Paseador 4" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Ana López</h2>
+            <p>Amante de los animales, especializada en paseos seguros y divertidos.</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

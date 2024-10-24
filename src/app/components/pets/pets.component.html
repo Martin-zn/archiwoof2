@@ -1,0 +1,27 @@
+<form (ngSubmit)="addPet()">
+  
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="pet.nombre" name="nombre" placeholder="nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Año de nacimiento</ion-label>
+    <ion-input type="number" [(ngModel)]="pet.anoNacimiento" name="anoNacimiento" placeholder="anoNacimiento" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Image</ion-label>
+    <ion-input [(ngModel)]="pet.imageUrl" name="imageUrl" placeholder="imageUrl" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripcion</ion-label>
+    <ion-input [(ngModel)]="pet.descripcion" name="descripcion" placeholder="descripcion" required></ion-input>
+  </ion-item>
+
+
+
+  <ion-button expand="full" color="success" type="submit">Guardar</ion-button>
+</form>
+

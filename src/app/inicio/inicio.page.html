@@ -1,0 +1,47 @@
+<ion-content>
+  <ion-grid>
+    <!-- Imagen principal -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <ion-img src="../../assets/logo compact.png" alt="ArchiWoof"  style="filter: invert(100%);" ></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- Descripción del proyecto -->
+    <ion-row class="ion-padding">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Sobre ArchiWoof</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            ArchiWoof es una aplicación dedicada a ayudar a los dueños de mascotas a gestionar la información de sus animales. 
+            Con PetCare, puedes registrar a tus mascotas, ver detalles sobre ellas, y solicitar paseos para asegurarte de que reciban el ejercicio que necesitan. ¡Todo en un solo lugar!
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botones de navegación -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="4">
+        <ion-button class="animacion4" expand="block" color="primary" (click)="func4()" >
+          Ver Mascotas
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button class="animacion5" expand="block" color="primary" (click)="func5()" >
+          Agregar Mascotas
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button class="animacion4" expand="block" color="primary" routerLink="/paseo">
+          Pedir un Paseo
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <br><br>
+<ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
+
+  </ion-grid>
+</ion-content>
