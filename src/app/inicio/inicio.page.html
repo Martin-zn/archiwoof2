@@ -1,47 +1,96 @@
 <ion-content>
-  <ion-grid>
-    <!-- Imagen principal -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-md="6">
-        <ion-img src="../../assets/logo compact.png" alt="ArchiWoof"  style="filter: invert(100%);" ></ion-img>
-      </ion-col>
-    </ion-row>
+  <!-- Contenido para el dueño -->
+  <ng-container *ngIf="usuario === 'dueño'">
+    <ion-grid>
+      <!-- Imagen principal -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="6">
+          <ion-img src="../../assets/logo compact.png" alt="ArchiWoof" style="filter: invert(100%);"></ion-img>
+        </ion-col>
+      </ion-row>
 
-    <!-- Descripción del proyecto -->
-    <ion-row class="ion-padding">
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Sobre ArchiWoof</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            ArchiWoof es una aplicación dedicada a ayudar a los dueños de mascotas a gestionar la información de sus animales. 
-            Con PetCare, puedes registrar a tus mascotas, ver detalles sobre ellas, y solicitar paseos para asegurarte de que reciban el ejercicio que necesitan. ¡Todo en un solo lugar!
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+      <!-- Descripción del proyecto -->
+      <ion-row class="ion-padding">
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Sobre ArchiWoof</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              ArchiWoof es una aplicación dedicada a ayudar a los dueños de mascotas a gestionar la información de sus animales. 
+              Con Archiwoof, puedes registrar a tus mascotas, ver detalles sobre ellas, y solicitar paseos para asegurarte de que reciban el ejercicio que necesitan. ¡Todo en un solo lugar!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-    <!-- Botones de navegación -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-md="4">
-        <ion-button class="animacion4" expand="block" color="primary" (click)="func4()" >
-          Ver Mascotas
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" size-md="4">
-        <ion-button class="animacion5" expand="block" color="primary" (click)="func5()" >
-          Agregar Mascotas
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" size-md="4">
-        <ion-button class="animacion4" expand="block" color="primary" routerLink="/paseo">
-          Pedir un Paseo
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <br><br>
-<ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
+      <!-- Botones de navegación -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="4">
+          <ion-button class="animacion4" expand="block" color="primary" (click)="func4()">
+            Ver Mascotas
+          </ion-button>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-button class="animacion5" expand="block" color="primary" (click)="func5()">
+            Agregar Mascotas
+          </ion-button>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-button class="animacion4" expand="block" color="primary" routerLink="/paseo">
+            Pedir un Paseo
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
+    </ion-grid>
+  </ng-container>
 
-  </ion-grid>
+  <!-- Contenido para el paseador -->
+  <ng-container *ngIf="usuario === 'paseador'">
+    <ion-header>
+      <ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
+    </ion-header>
+
+    <!-- Mapa simulado con imagen -->
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuJ-xRkXVXA2hHX9PSSy3ZzZQmhtsY971fojscC4RPGwqf1l2TBlofKWMupoOzc2tXpI&usqp=CAU"
+      alt="Mapa de paseos"
+      style="width: 100%; height: 300px; object-fit: cover;"
+    />
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Paseos Disponibles</ion-card-title>
+        <ion-card-subtitle>Estos perros necesitan un paseo</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Paseador 1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFqSGu35kbVqLXJXC-dC4TGmEvtZpFTfl2g&s" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Rodolfo el perro</h2>
+              <p>Perro muy bonito inquieto pero se porta bien</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Paseador 1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFqSGu35kbVqLXJXC-dC4TGmEvtZpFTfl2g&s" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Rodolfo el perro</h2>
+              <p>Perro muy bonito inquieto pero se porta bien</p>
+            </ion-label>
+          </ion-item>
+
+          <!-- Otros paseadores... -->
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 </ion-content>

@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  setUsuario(rol: string) {
+    localStorage.setItem('usuario', rol);
+  }
+
 }

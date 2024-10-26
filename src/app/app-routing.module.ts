@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: () => import('./paseo/paseo.module').then( m => m.PaseoPageModule),
     canActivate:[authGuard]
   },
+  {
+    path: 'loginPage',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-md="6">
-      <ion-img src="../../assets/logo compact.png" alt="ArchiWoof"  style="filter: invert(100%);" ></ion-img>
-    </ion-col>
-  </ion-row>
-</ion-header>
-<br><br>
+<ion-content>
+  <ion-grid>
+    <!-- Imagen principal -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <ion-img src="../../assets/logo compact.png" alt="ArchiWoof"  style="filter: invert(100%);" ></ion-img>
+      </ion-col>
+    </ion-row>
 
-
-<ion-content [fullscreen]="true">
-  <app-login></app-login>
+    <!-- Botones de navegación -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="4">
+        <ion-button class="animacion4" expand="block" color="primary" (click)="setUsuario('dueño')" routerLink="/loginPage" >
+          Dueño
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button class="animacion5" expand="block" color="primary" (click)="setUsuario('paseador')" routerLink="/loginPage">
+          Paseador
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <br><br>
+  </ion-grid>
 </ion-content>
