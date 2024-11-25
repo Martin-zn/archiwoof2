@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-button color="primary" routerLink="/inicio">inicio</ion-button>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h2>Número Aleatorio:</h2>
+    <p *ngIf="randomNumber !== null">{{ randomNumber }}</p>
+    <ion-button (click)="fetchRandomNumber()">Generar Otro Número</ion-button>
+  </div>
+</ion-content>

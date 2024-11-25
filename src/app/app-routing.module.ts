@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'loginPage',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'perro',
+    loadChildren: () => import('./perro/perro.module').then( m => m.PerroPageModule)
+  },
 ];
 
 @NgModule({

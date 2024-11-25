@@ -11,7 +11,8 @@ export const environment = {
     storageBucket: "archiwoof-43168.appspot.com",
     messagingSenderId: "702151207655",
     appId: "1:702151207655:web:d9023c894570f2bf6b9042"
-  }
+  },
+  MAPBOX_KEY:'pk.eyJ1IjoibWFydGluem4iLCJhIjoiY20zd3ljOHhjMDlsbDJtcHlqZnp6OWJmayJ9.uNTRRhy_4cSeyzPm1Qvm7Q',
 };
 
 /*
