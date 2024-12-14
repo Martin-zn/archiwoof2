@@ -1,0 +1,15 @@
+.leaflet-routing-container {
+    display: none !important; /* Oculta el panel completo */
+  }
+  
+  .leaflet-pane .leaflet-tooltip {
+    display: none !important; /* Oculta las instrucciones flotantes */
+  }
+
+.leaflet-routing-instruction-text {
+    display: none;
+}
+
+div.leaflet-routing-container.leaflet-control {
+    display: none !important;
+  }

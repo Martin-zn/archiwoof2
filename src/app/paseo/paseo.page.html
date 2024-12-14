@@ -1,15 +1,12 @@
 <ion-header>
-  <ion-button color="primary" routerLink="/inicio">inicio</ion-button>
+  <ion-button color="primary" routerLink="/inicio">Inicio</ion-button>
 </ion-header>
 
 <ion-content>
-  <div 
-  style="width: 100%; height: 300px; object-fit: cover;"
-  >
-    <div id="map" style="width: 100%; height: 100%;"></div>
+  <div style="width: 100%; height: 300px;">
+    <div id="mapId" style="width: 100%; height: 100%;"></div>
   </div>
 
-  <!-- Tarjeta con paseadores -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Paseadores Disponibles</ion-card-title>
@@ -18,7 +15,8 @@
 
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <!-- Paseador 1 -->
+        <ion-item button (click)="traceRoute([-33.472709, -70.579490])">
           <ion-thumbnail slot="start">
             <img alt="Paseador 1" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
@@ -28,7 +26,8 @@
           </ion-label>
         </ion-item>
 
-        <ion-item>
+        <!-- Paseador 2 -->
+        <ion-item button (click)="traceRoute([-33.468510, -70.564091])">
           <ion-thumbnail slot="start">
             <img alt="Paseador 2" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
@@ -38,23 +37,14 @@
           </ion-label>
         </ion-item>
 
-        <ion-item>
+        <!-- Paseador 3 -->
+        <ion-item button (click)="traceRoute([-33.472225, -70.547755])">
           <ion-thumbnail slot="start">
             <img alt="Paseador 3" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
           <ion-label>
             <h2>Pedro Rodríguez</h2>
             <p>Conoce las mejores rutas para paseos largos. Paseador certificado.</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
-            <img alt="Paseador 4" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Ana López</h2>
-            <p>Amante de los animales, especializada en paseos seguros y divertidos.</p>
           </ion-label>
         </ion-item>
       </ion-list>
